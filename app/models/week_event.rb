@@ -1,0 +1,2 @@
+class WeekEvent < ApplicationRecord
+end
