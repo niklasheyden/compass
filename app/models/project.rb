@@ -6,4 +6,5 @@ class Project < ApplicationRecord
   has_many :tags, dependent: :destroy
   has_many :notes, dependent: :destroy
   has_many :media, dependent: :destroy
+  validates :title, presence: true
 end
