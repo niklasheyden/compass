@@ -1,0 +1,15 @@
+<div class="container">
+  <% @weeks.each do |week| %>
+    <%= week.week_num %>
+  <% end %>
+  <%= simple_form_for [@user, @week] do |f| %>
+    <%= f.submit "+", class: "btn btn-primary" %>
+  <% end %>
+</div>
+
+<div class="container">
+  <h1> Bla </h1>
+  <%= @current_week[0].week_num %>
+</div>
+
+
