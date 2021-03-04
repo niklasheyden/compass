@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_04_202946) do
+ActiveRecord::Schema.define(version: 2021_03_04_203258) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -73,6 +73,8 @@ ActiveRecord::Schema.define(version: 2021_03_04_202946) do
     t.bigint "project_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "key_result_id", null: false
+    t.index ["key_result_id"], name: "index_notes_on_key_result_id"
     t.index ["project_id"], name: "index_notes_on_project_id"
   end
 
@@ -167,6 +169,7 @@ ActiveRecord::Schema.define(version: 2021_03_04_202946) do
   add_foreign_key "life_goals", "users"
   add_foreign_key "media", "key_results"
   add_foreign_key "media", "projects"
+  add_foreign_key "notes", "key_results"
   add_foreign_key "notes", "projects"
   add_foreign_key "projects", "users"
   add_foreign_key "tags", "projects"
