@@ -1,15 +1,15 @@
 <!-- login & profile -->
 <div class="dropdown">
-  <button class="dropbtn">
-    <% if @user != nil && @user.id != nil %>
-      <% if @user.user_info.photo.attached? %>
-         <%= cl_image_tag @user.user_info.photo.key, :width=>800, :height=>800, :gravity=>"face", :radius=>"max", :crop=>"crop",  class: 'profile-image' %>
-      <% else %>
-        <%= image_tag 'https://res.cloudinary.com/beyond-me/image/upload/v1603463495/vd8hwtz2hk06vt13ce4a4kd676iu.jpg', class: 'profile-image' %>
-      <% end %>
-    <% else %>
+  <button #class="dropbtn">
+    <%# if @user != nil && @user.id != nil %>
+      <%# if @user.user_info.photo.attached? %>
+         <%#=# cl_image_tag @user.user_info.photo.key, :width=>800, :height=>800, :gravity=>"face", :radius=>"max", :crop=>"crop",  class: 'profile-image' %>
+      <%# #else %>
+        <%#= #image_tag 'https://res.cloudinary.com/beyond-me/image/upload/v1603463495/vd8hwtz2hk06vt13ce4a4kd676iu.jpg', class: 'profile-image' %>
+      <%# end %>
+    <%# #else %>
       <%= image_tag 'https://res.cloudinary.com/beyond-me/image/upload/v1603463495/vd8hwtz2hk06vt13ce4a4kd676iu.jpg', class: 'profile-image' %>
-    <% end %>
+    <%# #end %>
   </button>
   <div class="dropdown-content">
     <% if user_signed_in? %>
