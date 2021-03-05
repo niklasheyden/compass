@@ -4,5 +4,9 @@ Rails.application.routes.draw do
 
   resources :user do
     resources :weeks, only: [:index, :show, :create]
+    get 'pages/dashboard'
+    get '/dashboard', to: 'pages#dashboard'
+    resources :projects, only: [:index, :show, :create]
+    resources :life_goals, only: [:index, :show, :create]
   end
 end

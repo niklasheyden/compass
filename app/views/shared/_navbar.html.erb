@@ -65,7 +65,7 @@
     </li>
 
     <li class="nav-item">
-      <%= link_to root_path, class:"nav-link" do %>
+      <%= link_to user_dashboard_path(@user), class:"nav-link" do %>
         <svg
           aria-hidden="true"
           focusable="false"
@@ -123,7 +123,7 @@
     </li>
 
     <li class="nav-item">
-      <%= link_to root_path, class:"nav-link" do %>
+      <%= link_to user_projects_path(@user), class:"nav-link" do %>
         <svg
           aria-hidden="true"
           focusable="false"
@@ -152,7 +152,7 @@
     </li>
 
     <li class="nav-item">
-      <%= link_to root_path, class:"nav-link" do %>
+      <%= link_to user_life_goals_path(@user), class:"nav-link" do %>
         <svg
           aria-hidden="true"
           focusable="false"
