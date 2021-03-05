@@ -65,7 +65,7 @@
     </li>
 
     <li class="nav-item">
-      <%= link_to root_path, class:"nav-link" do %>
+      <%= link_to user_dashboard_path(@user), class:"nav-link" do %>
         <svg
           aria-hidden="true"
           focusable="false"
@@ -118,12 +118,12 @@
             ></path>
           </g>
         </svg>
-        <span class="link-text">Habits</span>
+        <span class="link-text">My Week</span>
       <% end %>
     </li>
 
     <li class="nav-item">
-      <%= link_to root_path, class:"nav-link" do %>
+      <%= link_to user_projects_path(@user), class:"nav-link" do %>
         <svg
           aria-hidden="true"
           focusable="false"
@@ -147,12 +147,12 @@
             ></path>
           </g>
         </svg>
-        <span class="link-text">To Dos</span>
+        <span class="link-text">Projects</span>
       <% end %>
     </li>
 
     <li class="nav-item">
-      <%= link_to root_path, class:"nav-link" do %>
+      <%= link_to user_life_goals_path(@user), class:"nav-link" do %>
         <svg
           aria-hidden="true"
           focusable="false"
@@ -176,7 +176,7 @@
             ></path>
           </g>
         </svg>
-        <span class="link-text">Habit Buddies</span>
+        <span class="link-text">Life Goal</span>
       <% end %>
     </li>
 

@@ -43,6 +43,28 @@
   color: var(--text-secondary);
 }
 
+.active {
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  text-decoration: none;
+  transition: var(--transition-speed);
+  text-decoration: none !important;
+  color: var(--text-secondary);
+}
+
+.active svg {
+  width: 2rem;
+  min-width: 2rem;
+  margin: 0 1.5rem;
+}
+
+.active:hover {
+  filter: grayscale(0%) opacity(1);
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+}
+
 .link-text {
   display: none;
   margin-left: 1rem;

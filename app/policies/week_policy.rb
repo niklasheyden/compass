@@ -17,4 +17,8 @@ class WeekPolicy < ApplicationPolicy
     record.user == user
   end
 
+  def current_week?
+    user
+  end
+
 end

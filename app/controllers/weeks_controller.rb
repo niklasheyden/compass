@@ -8,7 +8,7 @@ class WeeksController < ApplicationController
 
   def create
     @user = current_user
-    @week_num = Week.count
+    @week_num = @user.weeks.count
     @week = Week.new(week_num: @week_num + 1)
     @week.user = current_user
     if @week.save
@@ -25,6 +25,13 @@ class WeeksController < ApplicationController
     @weeks = @user.weeks
     @current_week = Week.find([params[:id]])
     authorize @current_week
+  end
+
+  def current_week
+    @user = current_user
+    @week = Week.new
+    @current_week = @user.weeks.last
+    authorize @week
   end
 
 end

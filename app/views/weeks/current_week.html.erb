@@ -9,7 +9,10 @@
 
 <div class="container">
   <h1> Bla </h1>
-  <%= @current_week[0].week_num %>
+  <% if @current_week.nil? != true %>
+    <%= @current_week.week_num %>
+  <% else %>
+    <p>You haven't added any weeks yet</p>
+  <% end %>
+
 </div>
-
-
