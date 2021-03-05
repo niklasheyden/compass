@@ -1,5 +1,5 @@
 <div class="container">
-  <% @weeks.each do |week| %>
+  <% @user.weeks.each do |week| %>
     <%= week.week_num %>
   <% end %>
   <%= simple_form_for [@user, @week] do |f| %>
